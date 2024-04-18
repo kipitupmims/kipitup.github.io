@@ -1,46 +1,426 @@
-<!DOCTYPE HTML>  
-<html>  
-    <header>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="table_style.css">
-        <title>Anudeep's webpage</title>
-    </header>
-    <!-- <body background="berkeley.jpg">   -->
-        <body>
-        <!---Navigation--->
-        <!--This section of code defines the navigation bar at the top of the page.  The classes used here are defined in the style.css file.-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <!--This code defines the "My Webpage" link in the top left corner of the navigation pane-->
-                <a class="navbar-brand" href="./index.html">Welcome to my page</a>
-                <!--This code defines the "List" link in the top right corner of the navigation pane-->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./list.html">List</a></li>
-                </ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kipitup</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-grow text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar & Hero Start -->
+      <div class="container-xxl position-relative p-0" id="home">
+        <nav
+          class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+        >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto py-0">
+              <a href="#home" class="nav-item nav-link active">Home</a>
+              <a href="#feature" class="nav-item nav-link">Features</a>
+              <a href="#how-it-works" class="nav-item nav-link active"
+                >How It Works</a
+              >
+              <a href="#team" class="nav-item nav-link">Team</a>
+              <a href="#faq" class="nav-item nav-link">FAQs</a>
+              <a href="#contact-us" class="nav-item nav-link">Contact Us</a>
             </div>
+          </div>
         </nav>
-        <!--This section defines the middle section of the webpage-->
-        <header class="masthead bg-black text-white text-center" style="width: 1700px">
-            <div class="container d-flex align-items-center flex-column">
-                
-                <!-- This code is for the student name-->
-                <h1 class="masthead-heading text-uppercase mb-0">Anudeep Chawla</h1>
-                <!--This code creates the two lines separating the student name from the subtitle-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-line"></div>
+
+        <!-- HOMEPAGE -->
+        <div class="container-xxl bg-primary hero-header">
+          <div class="container px-lg-5">
+            <div class="row g-5">
+              <div class="col-lg-8 text-center text-lg-start">
+                <h1 class="text-white mb-4 animated slideInDown">Kipitup</h1>
+                <h3 class="text-white mb-4 animated slideInDown">
+                  Elevate Your Fitness Journey with Precision
+                </h3>
+                <p class="text-white pb-3 animated slideInDown">
+                  Kipitup is your personal health and fitness assistant,
+                  leveraging Apple Watch <br />
+                  biosensory data to offer tailored training routines for your
+                  next marathon run.
+                </p>
+              </div>
+              <div
+                class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                data-wow-delay="0.3s"
+              >
+                <!-- TODO ADD IMAGES HERE FOR MAIN CAROUSEL  -->
+                <div class="owl-carousel screenshot-carousel"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="container-xxl py-5" id="about">
+        <div class="container py-5 px-lg-5">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="text-primary-gradient fw-medium">About Kipitup</h1>
+          </div>
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+              <p class="mb-4">
+                Kipitup is an Apple Watch app that provides fitness advice for
+                any athlete, no matter where they are on their journey.
+                <br /><br />
+
+                It incorporates both the wearer's biosensory data and industry
+                leading best practices powered by an Al-based recommendation
+                system to ensure that advice is always specific to what would be
+                best for the wearer.
+                <!-- TODO get this from team  -->
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="owl-carousel screenshot-carousel">
+                <img class="img-fluid" src="img/user-flow/KApp(1).png" alt="" />
+                <img class="img-fluid" src="img/user-flow/KApp(2).png" alt="" />
+                <img class="img-fluid" src="img/user-flow/KApp(3).png" alt="" />
+                <img class="img-fluid" src="img/user-flow/KApp(4).png" alt="" />
+                <img class="img-fluid" src="img/user-flow/KApp(5).png" alt="" />
+                <img class="img-fluid" src="img/user-flow/KApp(6).png" alt="" />
+                <img class="img-fluid" src="img/user-flow/KApp(7).png" alt="" />
+                <img class="img-fluid" src="img/user-flow/KApp(8).png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Features Start -->
+      <div class="container-xxl py-5" id="feature">
+        <div class="container py-5 px-lg-5">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="text-primary-gradient fw-medium">Core Features</h1>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="feature-item bg-light rounded p-4">
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                  style="width: 60px; height: 60px"
+                >
+                  <i class="fa fa-solid fa-dumbbell text-white fs-4"></i>
                 </div>
-                <!--This code creates the subheading underneath the line dividers-->
-                <p class="masthead-subheading font-weight-light mb-0">Graduate Student @Master of Information Management and Systems at <b>UC Berkeley School of Information</b><br>Batch of 2024</br></p>
-                <p class="masthead-subheading font-weight-light mb-0" style="font-size: 15px">Being a data enthusiast, I am interested in understanding the intersection of healthcare, technology and analytics</p>
+                <h5 class="mb-3">Personalized Training Routines</h5>
+                <p class="m-0">
+                  Tailored advice for marathon preparation and other fitness
+                  goals
+                </p>
+              </div>
             </div>
-        </header>
-        <section class="text-center">
-
-            <div class="three columns">
-                <img class="profile-pic"  src="berkeley.jpg"  width="1700px" height="1200px" filter="blur" alt="" />
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="feature-item bg-light rounded p-4">
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                  style="width: 60px; height: 60px"
+                >
+                  <i class="fa fa-solid fa-star-of-life text-white"></i>
+                </div>
+                <h5 class="mb-3">Biosensory Data Utilization</h5>
+                <p class="m-0">
+                  Understanding your body vitals before sharing crucial advice
+                </p>
+              </div>
             </div>
-        </section>
-    </body>
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="feature-item bg-light rounded p-4">
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                  style="width: 60px; height: 60px"
+                >
+                  <i class="fa fa-solid fa-microphone text-white fs-4"></i>
+                </div>
+                <h5 class="mb-3">Interactive Prompts</h5>
+                <p class="m-0">
+                  Voice-activated fitness advice directly from your Apple Watch
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="feature-item bg-light rounded p-4">
+                <div
+                  class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                  style="width: 60px; height: 60px"
+                >
+                  <i class="fa fa-solid fa-question text-white fs-4"></i>
+                </div>
+                <h5 class="mb-3">Question Versatility</h5>
+                <p class="m-0">
+                  Kipitup will intelligently respond to any type of question
+                  posted
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Features End -->
 
+      <!-- How it works start -->
+      <div class="container-xxl py-5" id="how-it-works">
+        <div class="container py-5 px-lg-5">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="text-primary-gradient fw-medium">How It Works</h1>
+          </div>
+          <!-- TODO add some flowchart here  -->
+        </div>
+      </div>
+      <!-- how it works end  -->
+
+      <!-- Team Start -->
+      <div class="container-xxl py-5" id="team">
+        <div class="container py-5 px-lg-5">
+          <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="text-primary-gradient fw-medium">Meet the Team!</h1>
+          </div>
+          <div
+            class="owl-carousel testimonial-carousel wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <a href="https://www.linkedin.com/in/johncichuang/" target="_blank"
+              ><div class="testimonial-item rounded p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                    src="https://media.licdn.com/dms/image/C5603AQFTaCL6tzATKg/profile-displayphoto-shrink_400_400/0/1606776621019?e=1718841600&v=beta&t=gnxRu7HzPtswVD-H43ZHxRSr8xCgolaC4kRMwPvUGRo"
+                    style="width: 85px; height: 85px"
+                  />
+                  <div class="ms-4">
+                    <h5 class="mb-1">John Chuang</h5>
+                    <p class="mb-1" style="color: #919294">
+                      Advisor and Mentor
+                    </p>
+                  </div>
+                </div>
+                <p class="mb-0" style="color: #919294">todo</p>
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/anudeep-chawla/"
+              target="_blank"
+              ><div class="testimonial-item rounded p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                    src="https://media.licdn.com/dms/image/D5603AQGygNrFDCseBg/profile-displayphoto-shrink_400_400/0/1712764235556?e=1718841600&v=beta&t=tnqRIsa8yz7wgKGWrQz5WFwf2RrmcXrrCC3OEyms97U"
+                    style="width: 85px; height: 85px"
+                  />
+                  <div class="ms-4">
+                    <h5 class="mb-1">Anudeep Kaur Chawla</h5>
+                    <p class="mb-1" style="color: #919294">expertise</p>
+                  </div>
+                </div>
+                <p class="mb-0" style="color: #919294">todo</p>
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nithin-ravindra/"
+              target="_blank"
+              ><div class="testimonial-item rounded p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                    src="https://media.licdn.com/dms/image/D5603AQFo98LZMJroSQ/profile-displayphoto-shrink_400_400/0/1712536989737?e=1718841600&v=beta&t=31duA6iTrHD8p1cd3w5BS7LB7jnAqeIioE8LH-L3n8A"
+                    style="width: 85px; height: 85px"
+                  />
+                  <div class="ms-4">
+                    <h5 class="mb-1">Nithin Ravindra</h5>
+                    <p class="mb-1" style="color: #919294">Product Manager</p>
+                  </div>
+                </div>
+                <p class="mb-0" style="color: #919294">todo</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/paulkenniston/" target="_blank"
+              ><div class="testimonial-item rounded p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                    src="https://media.licdn.com/dms/image/D5603AQE_3s4MR1V3EA/profile-displayphoto-shrink_400_400/0/1663130422854?e=1718841600&v=beta&t=z1gPoXvLgSev9YpvDMICFjacedxDguRVhEDnibfD2xM"
+                    style="width: 85px; height: 85px"
+                  />
+                  <div class="ms-4">
+                    <h5 class="mb-1">Paul Kenniston</h5>
+                    <p class="mb-1" style="color: #919294">expertise</p>
+                  </div>
+                </div>
+                <p class="mb-0" style="color: #919294">todo</p>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/filipehss/" target="_blank"
+              ><div class="testimonial-item rounded p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                    src="https://media.licdn.com/dms/image/D5603AQFrt48MCgpbRg/profile-displayphoto-shrink_400_400/0/1667403350222?e=1718841600&v=beta&t=12sBRcWgo5aiHdBMXav4ZT3tq54bMlWbmh4bTMTzhGo"
+                    style="width: 85px; height: 85px"
+                  />
+                  <div class="ms-4">
+                    <h5 class="mb-1">Filipe Santos</h5>
+                    <p class="mb-1" style="color: #919294">expertise</p>
+                  </div>
+                </div>
+                <p class="mb-0" style="color: #919294">todo</p>
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/shreena-santosh-bhati/"
+              target="_blank"
+              ><div class="testimonial-item rounded p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                    src="https://media.licdn.com/dms/image/D4D03AQFKjqI-QRLgaA/profile-displayphoto-shrink_400_400/0/1707159413812?e=1718841600&v=beta&t=WCJ0yr4LeC2J6D8Qk252U08bbA-7hhMjQPX2UrbZ68U"
+                    style="width: 85px; height: 85px"
+                  />
+                  <div class="ms-4">
+                    <h5 class="mb-1">Shreena Bhati</h5>
+                    <p class="mb-1" style="color: #919294">expertise</p>
+                  </div>
+                </div>
+                <p class="mb-0" style="color: #919294">todo</p>
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/dhanya-george-koottummel-29b832104/"
+              target="_blank"
+              ><div class="testimonial-item rounded p-4">
+                <div class="d-flex align-items-center mb-4">
+                  <img
+                    class="img-fluid bg-white rounded flex-shrink-0 p-1"
+                    src="https://media.licdn.com/dms/image/C4D03AQGWr9h86UmT5w/profile-displayphoto-shrink_400_400/0/1663872064445?e=1718841600&v=beta&t=0pvJSByl96vZGsMs6cnc0nd9sq6MlgEvt87nDwksLDM"
+                    style="width: 85px; height: 85px"
+                  />
+                  <div class="ms-4">
+                    <h5 class="mb-1">Dhanya George Koottummel</h5>
+                    <p class="mb-1" style="color: #919294">expertise</p>
+                  </div>
+                </div>
+                <p class="mb-0" style="color: #919294">todo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Testimonial End -->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-primary text-light footer wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5 px-lg-5">
+          <div class="row g-5">
+            <div class="col-md-12 col-lg-12">
+              <h4 class="text-white mb-4">Address</h4>
+              <p>
+                <i class="fa fa-map-marker-alt me-3"></i>School of Information,
+                UC Berkeley
+              </p>
+              <p><i class="fa fa-phone-alt me-3"></i>+(510) 642-1464</p>
+              <p>
+                <i class="fa fa-envelope me-3"></i>info@ischool.berkeley.edu
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container px-lg-5">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">Kipitup</a>, All Right
+              Reserved.
+
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              Designed By
+              <a class="border-bottom" href="https://htmlcodex.com"
+                >HTML Codex</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"
+      ><i class="bi bi-arrow-up text-white"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
