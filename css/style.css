@@ -167,17 +167,20 @@ h6,
 }
 
 /*** Navbar ***/
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 .navbar-light .navbar-nav .nav-link {
   position: relative;
   margin-right: 25px;
   padding: 45px 0;
-  font-family: "Jost", sans-serif;
+  font-family: 'Bangers';
   font-size: 18px;
   font-weight: 500;
   color: var(--light) !important;
   outline: none;
   transition: 0.5s;
 }
+
 
 .navbar-light .navbar-nav .nav-link::before {
   position: absolute;
@@ -501,10 +504,12 @@ h6,
   transition: 0.3s;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 .footer .btn.btn-link::before {
   position: relative;
   content: "\f105";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Bangers";
   font-weight: 900;
   margin-right: 10px;
 }
