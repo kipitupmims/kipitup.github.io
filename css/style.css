@@ -173,7 +173,7 @@ h6,
   position: relative;
   margin-right: 25px;
   padding: 45px 0;
-  font-family: 'Bangers';
+  font-family: 'Calibri';
   font-size: 18px;
   font-weight: 500;
   color: var(--light) !important;
@@ -504,12 +504,10 @@ h6,
   transition: 0.3s;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
 .footer .btn.btn-link::before {
   position: relative;
   content: "\f105";
-  font-family: "Bangers";
+  font-family: "Calibri";
   font-weight: 900;
   margin-right: 10px;
 }
